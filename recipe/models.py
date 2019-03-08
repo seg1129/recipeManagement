@@ -4,6 +4,9 @@ from django.db import models
 class IngredientType(models.Model):
     type = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.type
+
 class Ingredient(models.Model):
     name = models.CharField(max_length=200)
     type = models.ForeignKey(IngredientType, on_delete=models.CASCADE)
