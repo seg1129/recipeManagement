@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import IngredientType, Ingredient, Recipe
+
+admin.site.register(IngredientType)
+
+admin.site.register(Ingredient)
+
+admin.site.register(Recipe)
