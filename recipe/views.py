@@ -29,5 +29,9 @@ def recipeList(request):
     recipes = Recipe.objects.all()
     return render(request, 'recipeList.html', {'recipes': recipes})
 
+def viewRecipe(request, recipe_id):
+    recipe = Recipe.objects.get(pk=recipe_id)
+    return render(request, 'viewRecipe.html', {'recipe': recipe})
+
 def workInProgress(request):
     return render(request, 'workInProgress.html')

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from recipe.views import recipeAddForm, recipeList, workInProgress
+from recipe.views import recipeAddForm, recipeList, workInProgress, viewRecipe
 from grocery.views import groceryLists, groceryListAdd, viewGroList
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     path('groceryLists', groceryLists, name='groceryLists'),
     path('groceryListAdd', groceryListAdd, name='groceryListAdd'),
     path('viewGroList/<int:list_id>', viewGroList, name='viewGroList'),
+    path('viewRecipe/<int:recipe_id>', viewRecipe, name='viewRecipe'),
 ]

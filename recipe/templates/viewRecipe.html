@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block main_content %}
+  <div class="container-fluid">
+       <div class="jumbotron">
+          <h1>{{recipe.name}}</h1>
+          <dl>
+            <dt>Source: {{recipe.source}}</dt>
+            <dt>Ingredients:</dt>
+              <ul>
+                <li>{{recipe.ingredient1}}</li>
+                {% if recipe.ingredient2 %}
+                  <li>{{recipe.ingredient2 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient3 %}
+                  <li>{{recipe.ingredient3 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient4 %}
+                  <li>{{recipe.ingredient4 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient5 %}
+                  <li>{{recipe.ingredient5 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient6 %}
+                  <li>{{recipe.ingredient6 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient7 %}
+                  <li>{{recipe.ingredient7 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient8 %}
+                  <li>{{recipe.ingredient8 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient9 %}
+                  <li>{{recipe.ingredient9 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient10 %}
+                  <li>{{recipe.ingredient10 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient11 %}
+                  <li>{{recipe.ingredient11 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient12 %}
+                  <li>{{recipe.ingredient12 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient13 %}
+                  <li>{{recipe.ingredient13 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient14 %}
+                  <li>{{recipe.ingredient14 }}</li>
+                {% endif %}
+
+                {% if recipe.ingredient15 %}
+                  <li>{{recipe.ingredient15 }}</li>
+                {% endif %}
+              </ul>
+              <dt>Instructions:</dt>
+              <ul><p>{{recipe.instructions}}</p></ul>
+          </dl>
+          </div>
+          </div>
+  {% endblock %}

@@ -15,7 +15,7 @@
     <tbody>
       <tr class='clickable-row' data-target="#purchaseModal">
         <form method="post">
-          <input id="list_ID" name="list_ID" type="hidden" value={{list.id}}>
+          <input id="list_ID" name="list_ID" type="hidden" value={{recipe.id}}>
           <td>{{ recipe.name }}</td>
           <td>
             <a href="{% url 'workInProgress' %}"
@@ -32,7 +32,7 @@
             </a>
         </td>
         <td>
-        <a href="{% url 'workInProgress' %}"
+        <a href="{% url 'viewRecipe' recipe.id %}"
           <button type="button" class="btn btn-default btn-md">
             <span class="fa fa-eye" aria-hidden="true" ></span>
           </button>
