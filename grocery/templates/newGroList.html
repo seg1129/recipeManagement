@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block main_content %}
+<div class="container-fluid">
+     <div class="jumbotron">
+        <h1>{{groceryList.name}}</h1>
+        <dl>
+        {% for item in groceryList.ingredients %}
+          <dt>{{ item }}</dt>
+        {% endfor %}
+        </dl>
+{% endblock %}

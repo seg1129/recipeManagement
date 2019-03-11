@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from recipe.views import recipeAddForm, recipeList, workInProgress
+from grocery.views import groceryLists, groceryListAdd, viewGroList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,7 @@ urlpatterns = [
     path('addRecipe', recipeAddForm, name='addRecipe'),
     path('recipeList', recipeList, name='recipeList'),
     path('workInProgress', workInProgress, name='workInProgress'),
+    path('groceryLists', groceryLists, name='groceryLists'),
+    path('groceryListAdd', groceryListAdd, name='groceryListAdd'),
+    path('viewGroList/<int:list_id>', viewGroList, name='viewGroList'),
 ]
