@@ -14,9 +14,8 @@ def groceryListAdd(request):
         form = GroceryListForm(data=request.POST)
         if form.is_valid():
             form.save()
-            print(form)
-            # getGroceryList(form)
-            return render(request, 'groceryList.html')
+            lists = GroceryList.objects.all()
+            return render(request, 'groceryList.html', {'lists': lists})
     else:
         print("we are getting to grocery views in else")
         form = GroceryListForm()
