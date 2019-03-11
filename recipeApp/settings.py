@@ -73,14 +73,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'recipeApp.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'recipeapp',
+#         'PORT': '32768',
+#         'PASSWORD': 'postgres',
+#         'USER':'postgres',
+#         'HOST':'localhost'
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'recipeapp',
-        'PORT': '32768',
-        'PASSWORD': 'postgres',
-        'USER':'postgres',
-        'HOST':'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
