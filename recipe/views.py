@@ -12,7 +12,8 @@ def recipeAddForm(request):
         form = RecipeForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'home.html')
+            recipes = Recipe.objects.all()
+            return render(request, 'recipeList.html', {'recipes': recipes})
     else:
         print("we are getting to views in else")
         form = RecipeForm()
