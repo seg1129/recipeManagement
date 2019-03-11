@@ -26,7 +26,7 @@ SECRET_KEY = 'fy7bb^0olj0a*zagrlil!d8838-dz%(t$dpfu71u(k#cba&eab'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sandbox.cci.drexel.edu']
+ALLOWED_HOSTS = ['sandbox.cci.drexel.edu', '127.0.0.1']
 
 
 # Application definition
