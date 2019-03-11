@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block main_content %}
   <div class="container">
     <div class="jumbotron">
       <h1 class="display-4"><center> Welcome to the Grocery List App </center></h1>
+      <center><img src = "{% static 'baking-bread-cooking.jpg' %}" style="width:500px;height:300px;"></center>
     </div>
   </div>
 {% endblock %}
