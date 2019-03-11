@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
 
 from .models import GroceryList
 from recipe.models import Recipe
@@ -14,8 +13,7 @@ def groceryListAdd(request):
         form = GroceryListForm(data=request.POST)
         if form.is_valid():
             form.save()
-            lists = GroceryList.objects.all()
-            return render(request, 'groceryList.html', {'lists': lists})
+            return redirect('groceryLists')
     else:
         print("we are getting to grocery views in else")
         form = GroceryListForm()

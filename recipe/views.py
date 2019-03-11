@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from django.forms import formset_factory
@@ -12,8 +12,7 @@ def recipeAddForm(request):
         form = RecipeForm(data=request.POST)
         if form.is_valid():
             form.save()
-            recipes = Recipe.objects.all()
-            return render(request, 'recipeList.html', {'recipes': recipes})
+            return redirect('recipeList')
     else:
         print("we are getting to views in else")
         form = RecipeForm()
