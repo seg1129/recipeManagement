@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from recipe.views import recipeAddForm
+from recipe.views import recipeAddForm, recipeList, workInProgress
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('addRecipe', recipeAddForm, name='addRecipe'),
+    path('recipeList', recipeList, name='recipeList'),
+    path('workInProgress', workInProgress, name='workInProgress'),
 ]
