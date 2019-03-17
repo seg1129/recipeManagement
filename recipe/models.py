@@ -11,6 +11,7 @@ class IngredientType(models.Model):
 class Recipe(models.Model):
     name = models.CharField(max_length=200)
     source = models.CharField(max_length=200, blank=False)
+    cookTime = models.CharField(max_length=200, blank=True)
     instructions = models.TextField()
     ingredient1 = models.CharField(max_length=200)
     ingredient1_type = models.ForeignKey(IngredientType, on_delete=models.CASCADE, related_name='ingredient1_type')
