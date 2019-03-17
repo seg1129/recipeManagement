@@ -14,7 +14,6 @@ def recipeAddForm(request):
             form.save()
             return redirect('recipeList')
     else:
-        print("we are getting to views in else")
         form = RecipeForm()
         # form2 = IngredientForm()
         # form2 = (formset_factory(IngredientForm, can_delete=False, extra=1))
@@ -22,7 +21,6 @@ def recipeAddForm(request):
 # def recipeAddForm(request):
 #     template = loader.get_template('addRecipe.html')
 #     context = {}
-#     print(template)
 #     return HttpResponse(template.render(context, request))
 
 def recipeList(request):

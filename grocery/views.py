@@ -15,7 +15,6 @@ def groceryListAdd(request):
             form.save()
             return redirect('groceryLists')
     else:
-        print("we are getting to grocery views in else")
         form = GroceryListForm()
     return render(request, 'addGroList.html', {'form': form})
 
