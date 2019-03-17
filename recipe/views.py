@@ -15,13 +15,8 @@ def recipeAddForm(request):
             return redirect('recipeList')
     else:
         form = RecipeForm()
-        # form2 = IngredientForm()
-        # form2 = (formset_factory(IngredientForm, can_delete=False, extra=1))
     return render(request, 'addRecipe.html', {'form': form})
-# def recipeAddForm(request):
-#     template = loader.get_template('addRecipe.html')
-#     context = {}
-#     return HttpResponse(template.render(context, request))
+
 
 def recipeList(request):
     recipes = Recipe.objects.all()

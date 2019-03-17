@@ -13,17 +13,3 @@ class GroceryListForm(ModelForm):
         super(GroceryListForm, self).__init__(*args, **kwargs)
         self.fields['recipes'] =  forms.ModelMultipleChoiceField(queryset=Recipe.objects.all(),
                                                 widget=forms.CheckboxSelectMultiple)
-
-        #  widgets = {
-        #     'recipes': CheckboxSelectMultiple(queryset=Recipe.objects.all()),
-        # }
-
-        # recipes = forms.ModelMultipleChoiceField(queryset=Recipe.objects.all(),
-        #                                         widget=forms.CheckboxInput,
-        #                                         required=False)
-
-        # widgets = {
-        # 'recipes': forms.ModelMultipleChoiceField(queryset=Recipe.objects.all(),
-        #                                         widget=forms.CheckboxSelectMultiple,
-        #                                         required=False)
-        # }

@@ -8,9 +8,3 @@ class RecipeForm(ModelForm):
         model = Recipe
         fields = '__all__'
         ingredients = forms.ModelMultipleChoiceField(queryset=None)
-
-# class IngredientForm(ModelForm):
-#     class Meta:
-#         model = Ingredient
-#         fields = ['name', 'type', 'amount']
-# forms.ModelMultipleChoiceField

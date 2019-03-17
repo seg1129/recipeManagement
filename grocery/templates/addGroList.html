@@ -8,7 +8,6 @@
   <div class="jumbotron">
     <h1>Create a Grocery List</h1>
       <form method="post" action="">
-       <!-- <form> -->
          <div class="form-group">
            {% csrf_token %} <!-- this is to prevent Cross site Scripting -->
            {{ form | crispy }}
